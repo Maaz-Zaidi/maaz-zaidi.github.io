@@ -24,14 +24,7 @@ const Home = () => {
 
   // Function to handle CSV file download
   const handleDownload = () => {
-    const csvData = 'data:text/csv;charset=utf-8,Name,Age\nMaaz,21\nZaidi,22'; // Sample CSV data
-    const encodedUri = encodeURI(csvData);
-    const link = document.createElement('a');
-    link.setAttribute('href', encodedUri);
-    link.setAttribute('download', 'sample.csv');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open('../../Maaz_Zaidi_Resume.pdf', '_blank', 'noopener,noreferrer');
   };
 
   return (
