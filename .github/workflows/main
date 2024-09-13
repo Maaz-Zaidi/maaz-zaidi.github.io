@@ -10,7 +10,7 @@ jobs:
       - name: Compile Resume
         uses: dante-ev/latex-action@latestnp
         with:
-          root_file: portfolio/resume.tex
+          root_file: resume.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
 
