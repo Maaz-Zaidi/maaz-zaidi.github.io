@@ -1,0 +1,26 @@
+name: Build LaTeX Resume and Deploy to GitHub Pages
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Compile Resume
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: resume.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -shell-escape
+
+      - name: Move PDF to build folder
+        run: |
+          mkdir -p build
+          mv Maaz_Zaidi_Resume.pdf build/Maaz_Zaidi_Resume.pdf
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
