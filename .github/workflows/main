@@ -14,6 +14,15 @@ jobs:
           compiler: pdflatex
           args: -interaction=nonstopmode -shell-escape
 
+       - name: Commit Resume
+         run: |
+          mv resume.pdf Maaz_Zaidi_Resume.pdf
+          git config --global user.name "maaz-zaidi/resume"
+          git config --global user.email "maaz.zaidi2003@gmail.com"
+          git add .
+          git commit -m '📄🔨 Generating Resume' || echo
+          git push
+
       - name: Move PDF to build folder
         run: |
           mkdir -p build
