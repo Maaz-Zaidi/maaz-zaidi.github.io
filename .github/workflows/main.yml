@@ -18,6 +18,8 @@ jobs:
         run: |
           mkdir -p build
           mv resume.pdf Maaz_Zaidi_Resume.pdf
+          git config --global user.name "Maaz Zaidi"
+          git config --global user.email "maaz.zaidi2003@gmail.com"
           git add .
           git commit -m '📄🔨 Generate Resume' || echo
           git push
