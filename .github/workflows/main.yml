@@ -17,7 +17,6 @@ jobs:
       - name: Move PDF to build folder
         run: |
           mkdir -p build
-          mv resume.pdf build/Maaz_Zaidi_Resume.pdf
           mv resume.pdf Maaz_Zaidi_Resume.pdf
           git add .
           git commit -m '📄🔨 Generate Resume' || echo
