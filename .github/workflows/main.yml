@@ -23,10 +23,12 @@ jobs:
         run: |
           mv resume.pdf build/Maaz_Zaidi_Resume.pdf
 
-      - name: Commit Resume
+      - name: Commit and Push changes
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }} 
         run: |
           git config --global user.name "Maaz Zaidi"
           git config --global user.email "maaz.zaidi2003@gmail.com"
           git add .
-          git commit -m '📄🔨 Generate Resume' || echo
-          git push
+          git commit -m '📄🔨 Generate Resume' || echo "Nothing to commit"
+          git push https://x-access-token:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Maaz-Zaidi/resume.git HEAD:master
