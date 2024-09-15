@@ -25,7 +25,6 @@ jobs:
 
       - name: Commit Resume
         run: |
-          rm resume.pdf
           git config --global user.name "Maaz Zaidi"
           git config --global user.email "maaz.zaidi2003@gmail.com"
           git add .
