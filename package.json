@@ -15,11 +15,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && npm run compile-resume && npm run move-resume",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "compile-resume": "pdflatex -output-directory resume resume.tex",
+    "move-resume": "mv resume/resume.pdf build/"
   },
   "eslintConfig": {
     "extends": [
