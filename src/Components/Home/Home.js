@@ -24,7 +24,7 @@ const Home = () => {
 
   const handleDownload = () => {
     // Make sure the path points to the correct file in the build directory
-    window.open('/Maaz_Zaidi_Resume.pdf', '_blank', 'noopener,noreferrer');
+    window.open('/resume/Maaz_Zaidi_Resume.pdf', '_blank', 'noopener,noreferrer');
   };
 
   return (
