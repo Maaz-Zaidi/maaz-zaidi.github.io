@@ -20,8 +20,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "compile-resume": "pdflatex -output-directory resume resume.tex",
-    "move-resume": "mv resume/resume.pdf build/"
+    "compile-resume": "pdflatex -output-directory resume resume.tex && mv resume/resume.pdf resume/Maaz_Zaidi_Resume.pdf",
+    "move-resume": "cp resume/Maaz_Zaidi_Resume.pdf build/"
   },
   "eslintConfig": {
     "extends": [
