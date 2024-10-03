@@ -22,9 +22,9 @@ const Home = () => {
     };
   }, []);
 
-  // Function to handle CSV file download
   const handleDownload = () => {
-    window.open('../../Maaz_Zaidi_Resume.pdf', '_blank', 'noopener,noreferrer');
+    // Make sure the path points to the correct file in the build directory
+    window.open('/Maaz_Zaidi_Resume.pdf', '_blank', 'noopener,noreferrer');
   };
 
   return (
