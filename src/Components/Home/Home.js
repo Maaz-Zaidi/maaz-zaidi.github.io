@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./Home.css"; 
 import WaveAnimation from "../Visuals/WaveAnimation"; // Import the WaveAnimation component
+import ProjectCards from "../Projects/ProjectCards";
 
 const Home = () => {
      // mouse movement-based parallax effect
@@ -23,13 +24,11 @@ const Home = () => {
   }, []);
 
   const handleDownload = () => {
-    // Make sure the path points to the correct file in the build directory
     window.open('/resume/Maaz_Zaidi_Resume.pdf', '_blank', 'noopener,noreferrer');
   };
 
   return (
     <div className="home-container">
-      {/* Section for the "Portfolio" text in the middle */}
       <div id="parallax-move" className="content-container">
         <div className="portfolio-text layer" data-depth="0.5">
           
@@ -53,15 +52,13 @@ const Home = () => {
           </button>
         </div>
 
-        {/* Wave Animation at the bottom of the container */}
         <div className="wave-container">
           <WaveAnimation />
         </div>
       </div>
       
-      {/* Below the wave is where the rest of the app's content can go */}
       <div className="main-app-content">
-        {/* Main app content goes here */}
+        <ProjectCards />
       </div>
     </div>
   );

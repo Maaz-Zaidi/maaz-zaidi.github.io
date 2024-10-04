@@ -1,0 +1,59 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.project-card {
+  width: 400px;
+  height: 250px; 
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-image-placeholder {
+  flex-grow: 1;
+  background-color: #5BC0DE;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /* Placeholder for the image */
+}
+
+.project-info {
+  background-color: white;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+}
+
+.project-info p {
+  margin: 0;
+  font-family: Lato;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight:normal;
+  color: #5BC0DE;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
